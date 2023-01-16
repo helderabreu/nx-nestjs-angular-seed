@@ -1,4 +1,5 @@
 {
+  "name": "client-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/client-e2e/src",
   "projectType": "application",
@@ -6,8 +7,9 @@
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/client-e2e/cypress.json",
-        "devServerTarget": "client:serve:development"
+        "cypressConfig": "apps/client-e2e/cypress.config.ts",
+        "devServerTarget": "client:serve:development",
+        "testingType": "e2e"
       },
       "configurations": {
         "production": {
